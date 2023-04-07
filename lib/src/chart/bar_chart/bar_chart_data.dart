@@ -193,10 +193,12 @@ class BarChartGroupData with EquatableMixin {
     bool? groupVertically,
     List<BarChartRodData>? barRods,
     double? barsSpace,
+    dynamic metaData,
     List<int>? showingTooltipIndicators,
   })  : groupVertically = groupVertically ?? false,
         barRods = barRods ?? const [],
         barsSpace = barsSpace ?? 2,
+        metaData = metaData,
         showingTooltipIndicators = showingTooltipIndicators ?? const [];
 
   /// Order along the x axis in which titles, and titles only, will be shown.
@@ -205,6 +207,8 @@ class BarChartGroupData with EquatableMixin {
   /// in [x] position through [SideTitles.getTitlesWidget] function.
   @required
   final int x;
+
+  final metaData;
 
   /// If set true, it will show bars below/above each other.
   /// Otherwise, it will show bars beside each other.
