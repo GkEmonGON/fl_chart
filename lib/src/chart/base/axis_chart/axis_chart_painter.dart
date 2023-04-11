@@ -16,8 +16,6 @@ import 'package:flutter/material.dart';
 abstract class AxisChartPainter<D extends AxisChartData>
     extends BaseChartPainter<D> {
   AxisChartPainter() : super() {
-    _gridPaint = Paint()..style = PaintingStyle.stroke;
-
     _backgroundPaint = Paint()..style = PaintingStyle.fill;
 
     _rangeAnnotationPaint = Paint()..style = PaintingStyle.fill;
@@ -25,6 +23,8 @@ abstract class AxisChartPainter<D extends AxisChartData>
     _extraLinesPaint = Paint()..style = PaintingStyle.stroke;
 
     _imagePaint = Paint();
+
+    _gridPaint = Paint()..style = PaintingStyle.stroke;
   }
   late Paint _gridPaint;
   late Paint _backgroundPaint;

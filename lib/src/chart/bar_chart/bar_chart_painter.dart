@@ -104,6 +104,7 @@ class BarChartPainter extends AxisChartPainter<BarChartData> {
         );
       }
     }
+    super.drawGrid(canvasWrapper, holder);
   }
 
   /// Calculates bars position alongside group positions.
