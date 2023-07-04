@@ -34,6 +34,7 @@ class BarChartPainter extends AxisChartPainter<BarChartData> {
       ..color = Colors.transparent
       ..strokeWidth = 1.0;
   }
+
   late Paint _barPaint;
   late Paint _barStrokePaint;
   late Paint _bgTouchTooltipPaint;
@@ -104,7 +105,6 @@ class BarChartPainter extends AxisChartPainter<BarChartData> {
         );
       }
     }
-    super.drawGrid(canvasWrapper, holder);
   }
 
   /// Calculates bars position alongside group positions.
@@ -699,6 +699,7 @@ class BarChartPainter extends AxisChartPainter<BarChartData> {
 @visibleForTesting
 class GroupBarsPosition {
   GroupBarsPosition(this.groupX, this.barsX);
+
   final double groupX;
   final List<double> barsX;
 }
